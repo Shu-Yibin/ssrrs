@@ -97,7 +97,7 @@ freeV="1"
   if [ ! -d "/tmp/LNMP-${envType}" ]; then
     cd /tmp || exit
     if [ ! -f "LNMP-${envType}.zip" ]; then
-      if ! curl -L --retry 3 -o "LNMP-${envType}.zip" "https://raw.githubusercontent.com/Andyanna/ssrrs/master/${envType}.zip"
+      if ! curl -L --retry 3 -o "LNMP-${envType}.zip" "https://raw.githubusercontent.com/Shu-Yibin/ssrrs/master/${envType}.zip"
       then
         showError "LNMP-${envType} download failed!"
         exit
@@ -413,7 +413,7 @@ freeV="1"
 	cd default
 	rm -rf index.html
 	#获取git最新源码
- git clone https://github.com/ssrpanel/SSRPanel.git tmp && mv tmp/.git . && rm -rf tmp && git reset --hard
+ git clone https://github.com/Shu-Yibin/SSRPanel.git tmp && mv tmp/.git . && rm -rf tmp && git reset --hard
  
  
 # cd /root/
@@ -697,12 +697,12 @@ rm -rf raspanel.sh
 ipAddress=$(ip addr | grep -E -o '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -E -v "^192\\.168|^172\\.1[6-9]\\.|^172\\.2[0-9]\\.|^172\\.3[0-2]\\.|^10\\.|^127\\.|^255\\." | head -n 1) || '0.0.0.0'
 #	ipAddress=`curl -s http://members.3322.org/dyndns/getip`;
 #	ipAddress=`wget http://members.3322.org/dyndns/getip -O - -q ; echo`;
-	shadowsocksr="https://raw.githubusercontent.com/Andyanna/ssrrs/master/shadowsocksr.zip"
-	shadowsocksr2="https://raw.githubusercontent.com/Andyanna/ssrrs/master/shadowsocksr.zip"
+	shadowsocksr="https://raw.githubusercontent.com/Shu-Yibin/ssrrs/master/shadowsocksr.zip"
+	shadowsocksr2="https://raw.githubusercontent.com/Shu-Yibin/ssrrs/master/shadowsocksr.zip"
  libAddr="https://github.com/jedisct1/libsodium/releases/download/1.0.10/libsodium-1.0.10.tar.gz"
 
 	Download1="http://www.berryphone.club/"
-	Download2="https://raw.githubusercontent.com/Andyanna/ssrrs/master/"
+	Download2="https://raw.githubusercontent.com/Shu-Yibin/ssrrs/master/"
 	
 	
 	mysqlPWD=`date +%s%N | md5sum | head -c 20 ; echo`;
